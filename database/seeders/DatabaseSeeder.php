@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        User::factory(3)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -24,17 +26,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        User::create([
-            'name' => 'Darma Riduan',
-            'email' => 'freehost@gmail.com',
-            'password' =>bcrypt('password')
-        ]);
-
-        User::create([
-            'name' => 'Sativa',
-            'email' => 'sativa@gmail.com',
-            'password' =>bcrypt('password')
-        ]);
+     
 
         Category::create([
             'name' => 'Web',
@@ -46,26 +38,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'network'
         ]);
 
-
-        Post::create([
-            'title' => 'Judul Pertama',
-            'slug' => 'judul-pertama',
-            'excerpt' =>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corrupti odio quas voluptatem aliquam adipisci nemo quidem necessitatibus',
-            'body' => '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corrupti odio quas voluptatem aliquam adipisci nemo quidem necessitatibus. Sit autem quaerat dicta distinctio molestiae quod a optio necessitatibus nostrum mollitia harum pariatur cupiditate esse, perspiciatis sapiente sunt officia delectus velit excepturi laborum voluptatum! Iure iste voluptas rerum eum illum eius!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corrupti odio quas voluptatem aliquam adipisci nemo quidem necessitatibus. Sit autem quaerat dicta distinctio molestiae quod a optio necessitatibus nostrum mollitia harum pariatur cupiditate esse, perspiciatis sapiente sunt officia delectus velit excepturi laborum voluptatum! Iure iste voluptas rerum eum illum eius!</p>',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
-
-        Post::create([
-            'title' => 'Judul Kedua',
-            'slug' => 'judul-kedua',
-            'excerpt' =>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corrupti odio quas voluptatem aliquam adipisci nemo quidem necessitatibus',
-            'body' => '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corrupti odio quas voluptatem aliquam adipisci nemo quidem necessitatibus. Sit autem quaerat dicta distinctio molestiae quod a optio necessitatibus nostrum mollitia harum pariatur cupiditate esse, perspiciatis sapiente sunt officia delectus velit excepturi laborum voluptatum! Iure iste voluptas rerum eum illum eius!</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corrupti odio quas voluptatem aliquam adipisci nemo quidem necessitatibus. Sit autem quaerat dicta distinctio molestiae quod a optio necessitatibus nostrum mollitia harum pariatur cupiditate esse, perspiciatis sapiente sunt officia delectus velit excepturi laborum voluptatum! Iure iste voluptas rerum eum illum eius!</p>',
-            'category_id' => 2,
-            'user_id' => 2
-        ]);
-
-
+        Post::factory(13)->create();
 
     }
 }
