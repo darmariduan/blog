@@ -4,7 +4,7 @@
 <article>
 <h1 class="mb-5">{{ $post->title }}</h1>
 
-{{-- Tag html post hidden --}}
+<p>By. Darma Riduan <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
 {!! $post->body !!}
 </article>
 
