@@ -32,13 +32,17 @@ class DatabaseSeeder extends Seeder
             'name' => 'Web',
             'slug' => 'web'
         ]);
+        Category::create([
+            'name' => 'Cloud',
+            'slug' => 'cloud'
+        ]);
 
         Category::create([
             'name' => 'Network',
             'slug' => 'network'
         ]);
 
-        Post::factory(13)->create();
+        Post::factory(20)->create();
 
     }
 }
