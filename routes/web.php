@@ -48,19 +48,4 @@ Route::get('/categories', function () {
     ]);
 });
 
-Route::get('categories/{category:slug}', function (Category $category) {
-    return view('posts', [
-        //Lazy Eager Loading
-        'title' => "Post by Category: $category->name",
-        'active' => 'categories',
-        'posts' => $category->posts->load('category', 'author')
-    ]);
-});
 
-Route::get('/authors/{author:username}', function (User $author) {
-    return view('posts', [
-        'title' => "Post by Author : $author->name",
-        //Lazy Eager Loading
-        'posts' => $author->posts->load('category', 'author')
-    ]);
-});
