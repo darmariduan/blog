@@ -19,6 +19,9 @@
           <a class="nav-link {{ ($active=== 'categories') ? 'active' : '' }}" href="/categories">Categories</a>
         </li>
       </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="/login" class="nav-link {{ ($active=== 'login') ? 'active' : '' }}"><i class="bi bi-box-arrow-right"></i></a></li>
+      </ul>
     </div>
 </div>
   </nav>
