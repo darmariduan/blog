@@ -19,6 +19,7 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Category Name</th>
+          <th scope="col">Category Slug</th>
           <th scope="col">Action</th>
           
         </tr>
@@ -28,9 +29,10 @@
         <tr>
           <td>{{ $loop->iteration }}</td>
           <td>{{ $category->name }}</td>
+          <td>{{ $category->slug }}</td>
           <td>
-<a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-<a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+{{-- <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info"><span data-feather="eye"></span></a> --}}
+<a href="/dashboard/categories/{{ $category->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
 <form action="/dashboard/categories/{{ $category->id }}" method="POST" class="d-inline">
 @method('delete')
 @csrf
